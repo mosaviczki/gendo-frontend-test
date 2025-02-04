@@ -16,11 +16,11 @@
     font-size: 12px;
 
     h1{
-        font-weight: global.$text-style-fontweight;
+        font-weight: global.$text-style-bold;
     }
 
     span{
-        font-weight: global.$text-style-two-fontweight;
+        font-weight: global.$text-style-regular;
     }
 
     @include media.desktop {

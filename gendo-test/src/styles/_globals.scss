@@ -21,10 +21,17 @@ $slate-grey-color:#5C646D;
 $slate-grey-two-color: #586069;
 $default-color: #2d3136;
 
-$text-style-fontsize: 10px;
 $text-style-fontweight: 700;
 $text-style-two-fontsize: 7px;
 $text-style-two-fontweight: 400;
+
+$text-style-title: 24px;
+$text-style-paragraph: 16px;
+$text-style-small: 12px;
+$text-style-fontsize: 10px;
+$text-style-two-fontsize: 7px;
+$text-style-regular: 400;
+$text-style-bold: 700;
 
 @mixin tablet {
   @media (min-width: 480px) {

@@ -18,28 +18,46 @@
 
     @include media.desktop {
         @include mixin.centered;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 
 .imageProfile{
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
     border-radius: 50%;
+
+    @include media.desktop{
+        width: 200px;
+        height: 200px;
+    }
+
+    @include media.tablet{
+        width: 150px;
+        height: 150px;
+    }
 }
 
 .aboutProfile{
     color:black;
 
     h1{
-        font-weight: global.$text-style-fontweight;
+        font-weight: global.$text-style-bold;
         color: global.$default-color;
-        font-size: 22px;
+        font-size: global.$text-style-title;
+
     }
 
     p{
-        font-weight: global.$text-style-two-fontweight;
+        font-weight: global.$text-style-regular;
         color: global.$slate-grey-color;
-        font-size: 16px;
+        font-size: global.$text-style-paragraph;
+    }
+
+    @include media.desktop{
+        text-align: center;
     }
 }

@@ -1,4 +1,6 @@
-@use "./styles/globals" as *;
+@use "./styles/globals" as global;
+@use "./styles/mixin" as mixin;
+@use "./styles/media" as media;
 
 .containerMain {
     width: 100%;
@@ -12,5 +14,114 @@
     } */
     main {
         width: 100%;
+    }
+}
+
+.contentMain {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+
+    @include media.desktop {
+        flex-direction: row;
+    }
+}
+
+.profile {
+    @include media.desktop {
+        width: 25%;
+    }
+}
+
+.detailGithub {
+    flex: 1;
+
+    @include media.desktop {
+        padding: 25px 20px 10px;
+    }
+}
+
+.buttonOption {
+    flex: 1;
+    padding: 15px 20px;
+    width: 100%;
+    border-bottom: 1px solid global.$pale-grey-color;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+
+    @include media.desktop {
+        justify-content: flex-start;
+    }
+}
+
+.button {
+    width: 50%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: global.$text-style-title;
+    font-weight: global.$text-style-regular;
+    color: global.$slate-grey-two-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    @include media.desktop {
+        width: 150px;
+    }
+}
+
+.button.active {
+    font-weight: global.$text-style-bold;
+}
+
+.count {
+    background-color: global.$pale-grey-color;
+    padding: 3px 6px;
+    border-radius: 10px;
+    font-size: global.$text-style-small;
+    font-weight: global.$text-style-bold;
+}
+
+.line {
+    position: absolute;
+    bottom: 0px;
+    height: 5px;
+    width: 50%;
+    background-color: orange;
+    transition: left 0.3s ease;
+
+    @include media.tablet{
+        max-width: 150px;
+    }
+}
+.lineLeft{
+    left: 0%;
+
+    @include media.tablet{
+        left: 20px;
+    }
+}
+.lineRight{
+    left: 50%;
+
+    @include media.tablet{
+        left: 190px;
+    }
+}
+
+.contentGithub{
+    width: 100%;
+    padding: 20px;
+
+    @include media.tablet{
+        padding: 0px;
     }
 }

@@ -1,0 +1,29 @@
+@use "../../styles/globals" as global;
+@use "../../styles/mixin" as mixin;
+@use "../../styles/media" as media;
+
+.containerSearch {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    width: 100%;
+    max-width: 320px;
+    border: 1px solid global.$light-color;
+    border-radius: 3px;
+    padding: 5px;
+
+    input {
+        outline: none;
+        border: none;
+        color: global.$warm-grey-color;
+
+        &::placeholder {
+            color: global.$light-color;
+        }
+    }
+
+    svg {
+        color: global.$warm-grey-color;
+    }
+}
