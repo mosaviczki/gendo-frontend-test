@@ -1,12 +1,16 @@
-import './App.scss'
+import styles from "./app.module.scss";
+import Header from "./components/Header";
+import Profile from "./components/Profile";
 
 function App() {
-
   return (
-    <>
-      <h1>Vite + React</h1>
-    </>
-  )
+    <div className={styles.containerMain}>
+      <Header />
+      <main>
+        <Profile />
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;

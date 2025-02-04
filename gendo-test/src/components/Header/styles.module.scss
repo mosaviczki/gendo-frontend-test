@@ -1,0 +1,33 @@
+@use "../../styles/globals" as global;
+@use "../../styles/mixin" as mixin;
+@use "../../styles/media" as media;
+
+.containerHeader{
+    width: 100%;
+    background-color: global.$bgdefault-color;
+}
+
+.contentHeader{
+    display: flex;
+    gap: 10px;
+    color: global.$white-color;
+    padding: 5px 15px;
+    align-items: center;
+    font-size: 12px;
+
+    h1{
+        font-weight: global.$text-style-fontweight;
+    }
+
+    span{
+        font-weight: global.$text-style-two-fontweight;
+    }
+
+    @include media.desktop {
+        @include mixin.centered;
+    }
+}
+
+.imageGithub{
+    width: 40px;
+}
