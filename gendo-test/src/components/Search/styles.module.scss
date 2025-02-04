@@ -6,17 +6,17 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 5px;
+    gap: 15px;
     width: 100%;
-    max-width: 320px;
     border: 1px solid global.$light-color;
     border-radius: 3px;
-    padding: 5px;
+    padding: 10px 15px;
 
     input {
         outline: none;
         border: none;
         color: global.$warm-grey-color;
+        font-size: global.$text-style-paragraph;
 
         &::placeholder {
             color: global.$light-color;
@@ -25,5 +25,9 @@
 
     svg {
         color: global.$warm-grey-color;
+    }
+
+    @include media.tablet{
+        max-width: 340px;
     }
 }

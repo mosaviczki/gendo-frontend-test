@@ -30,14 +30,14 @@
     object-fit: cover;
     border-radius: 50%;
 
-    @include media.desktop{
-        width: 200px;
-        height: 200px;
-    }
-
     @include media.tablet{
         width: 150px;
         height: 150px;
+    }
+
+    @include media.desktop{
+        width: 260px;
+        height: 260px;
     }
 }
 
