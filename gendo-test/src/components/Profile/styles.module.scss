@@ -1,0 +1,45 @@
+@use "../../styles/globals" as global;
+@use "../../styles/mixin" as mixin;
+@use "../../styles/media" as media;
+
+.containerProfile{
+    width: 100%;
+    padding: 25px 20px;
+
+    @include media.desktop {
+        @include mixin.centered;
+    }
+}
+
+.contentProfile{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    @include media.desktop {
+        @include mixin.centered;
+    }
+}
+
+.imageProfile{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.aboutProfile{
+    color:black;
+
+    h1{
+        font-weight: global.$text-style-fontweight;
+        color: global.$default-color;
+        font-size: 22px;
+    }
+
+    p{
+        font-weight: global.$text-style-two-fontweight;
+        color: global.$slate-grey-color;
+        font-size: 16px;
+    }
+}

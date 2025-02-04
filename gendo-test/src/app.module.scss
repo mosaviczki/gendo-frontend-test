@@ -1,6 +1,6 @@
 @use "./styles/globals" as *;
 
-.containerMain{
+.containerMain {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -10,4 +10,7 @@
     /* @include desktop {
         
     } */
+    main {
+        width: 100%;
+    }
 }
