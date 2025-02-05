@@ -1,0 +1,66 @@
+@use "../../styles/globals" as global;
+@use "../../styles/mixin" as mixin;
+@use "../../styles/media" as media;
+
+.diretory {
+    padding: 20px 15px;
+
+    @include media.desktop {
+        @include mixin.centered;
+    }
+}
+
+.containerTable {
+    padding: 0px 20px;
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid global.$default-color;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+
+    th,
+    td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid global.$default-color;
+    }
+
+    tr {
+        &:last-child td {
+            border-bottom: none;
+        }
+    }
+}
+
+.containerReadme {
+    padding: 10px 20px;
+
+}
+
+.readme {
+    padding: 20px;
+    border: 1px solid global.$default-color;
+    border-radius: 10px;
+}
+
+.headerReadme {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+}
+
+.textReadme {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 10px;
+    max-width: 100%;
+    word-wrap: break-word;
+
+    img {
+        width: 100%;
+    }
+}

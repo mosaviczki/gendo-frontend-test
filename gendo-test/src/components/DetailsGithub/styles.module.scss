@@ -8,10 +8,17 @@
 
 .descriptionGithub {
     display: flex;
+    width: 100%;
     flex-direction: column;
     border-bottom: 1px solid global.$pale-grey-color;
     padding: 30px 0;
     gap: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: global.$white-color;
+    outline: none;
+    text-align: start;
 
     &:last-child {
         border-bottom: none;
@@ -24,6 +31,11 @@
 
     p {
         color: global.$slate-grey-color;
+        padding-top: 10px;
+    }
+
+    a{
+        text-decoration: none;
     }
 }
 

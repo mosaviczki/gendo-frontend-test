@@ -55,9 +55,13 @@
     background-color: global.$rusty-orange-color;
     transition: left 0.3s ease;
 
-    @include media.tablet {
+    @include media.desktop {
         max-width: 150px;
     }
+
+    /* @include media.tablet {
+        max-width: 150px;
+    } */
 }
 
 .lineLeft {
