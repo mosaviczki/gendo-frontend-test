@@ -1,14 +1,17 @@
-import Homem from "../../assets/homem.jpg";
 import styles from "./styles.module.scss";
 
-export default function Profile() {
+export default function Profile({ infos }) {
   return (
     <div className={styles.containerProfile}>
       <div className={styles.contentProfile}>
-        <img src={Homem} alt="person" className={styles.imageProfile} />
+        <img
+          src={infos.avatar_url}
+          alt="person"
+          className={styles.imageProfile}
+        />
         <div className={styles.aboutProfile}>
-          <h1>Roger Ramos</h1>
-          <p>Front end Dev and UI Designer</p>
+          <h1>{infos.name}</h1>
+          <p>{infos.bio}</p>
         </div>
       </div>
     </div>

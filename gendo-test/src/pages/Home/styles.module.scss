@@ -1,0 +1,72 @@
+@use "../../styles/globals" as global;
+@use "../../styles/mixin" as mixin;
+@use "../../styles/media" as media;
+
+.containerMain {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    main {
+        width: 100%;
+    }
+}
+
+.loading {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .imageLoading {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.contentMain {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+
+    @include media.desktop {
+        flex-direction: row;
+        @include mixin.centered;
+    }
+}
+
+.profile {
+    @include media.desktop {
+        width: 25%;
+    }
+}
+
+.detailGithub {
+    flex: 1;
+
+    @include media.desktop {
+        padding: 25px 20px 10px;
+    }
+}
+
+.contentGithub {
+    width: 100%;
+    padding: 30px 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media.tablet {
+        align-items: flex-start;
+    }
+
+    @include media.desktop {
+        padding: 30px 0 0;
+    }
+}
