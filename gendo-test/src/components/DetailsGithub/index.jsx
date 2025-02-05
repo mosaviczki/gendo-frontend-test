@@ -1,8 +1,12 @@
 /* eslint-disable react/prop-types */
 import styles from "./styles.module.scss";
 import Fork from "../../assets/git.svg";
+import { useEffect } from "react";
 
 export default function DetailGithub({ icon, list, type }) {
+  useEffect(()=>{
+    console.log(list)
+  }, [])
   return (
     <div className={styles.containerGithub}>
       {list.length > 0 &&

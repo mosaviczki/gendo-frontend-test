@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
     main {
         width: 100%;
     }
@@ -41,87 +41,14 @@
     }
 }
 
-.buttonOption {
-    flex: 1;
-    padding: 15px 20px;
-    width: 100%;
-    border-bottom: 2px solid global.$pale-grey-color;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 20px;
-    position: relative;
-
-    @include media.desktop {
-        justify-content: flex-start;
-    }
-}
-
-.button {
-    width: 50%;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    font-size: global.$text-style-title;
-    font-weight: global.$text-style-regular;
-    color: global.$slate-grey-two-color;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-
-    @include media.desktop {
-        width: 150px;
-    }
-}
-
-.button.active {
-    font-weight: global.$text-style-bold;
-}
-
-.count {
-    background-color: global.$pale-grey-color;
-    padding: 3px 6px;
-    border-radius: 10px;
-    font-size: global.$text-style-small;
-    font-weight: global.$text-style-bold;
-}
-
-.line {
-    position: absolute;
-    bottom: -2px;
-    height: 5px;
-    width: 50%;
-    background-color: global.$rusty-orange-color;
-    transition: left 0.3s ease;
-
-    @include media.tablet{
-        max-width: 150px;
-    }
-}
-.lineLeft{
-    left: 0%;
-
-    @include media.tablet{
-        left: 20px;
-    }
-}
-.lineRight{
-    left: 50%;
-
-    @include media.tablet{
-        left: 190px;
-    }
-}
-
-.contentGithub{
+.contentGithub {
     width: 100%;
     padding: 30px 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    @include media.tablet{
+    @include media.tablet {
         padding: 30px 0 0;
         align-items: flex-start;
     }

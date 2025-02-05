@@ -7,6 +7,7 @@ import { IoMdCode } from "react-icons/io";
 import { FaStar } from "react-icons/fa";
 import DetailGithub from "./components/DetailsGithub";
 import { Octokit } from "https://esm.sh/@octokit/core@4.2.2";
+import Menu from "./components/Menu";
 
 export const octokit = new Octokit({
   auth: import.meta.env.VITE_GITHUB_TOKEN,
@@ -15,9 +16,11 @@ export const octokit = new Octokit({
 function App() {
   const [step, setStep] = useState(0);
   const [repos, setRepos] = useState();
-  const [starred, setStarred] = useState([]);
+  const [starred, setStarred] = useState();
   const [profile, setProfile] = useState();
-  const user = 'mosaviczki';
+  const [filteredRepos, setFilteredRepos] = useState();
+  const [filteredStarred, setFilteredStarred] = useState();
+  const user = "mosaviczki";
 
   const handleRepos = () => setStep(0);
   const handleStarred = () => setStep(1);
@@ -29,68 +32,81 @@ function App() {
           `GET /users/${user}/repos`
         );
         setRepos(repos);
+        setFilteredRepos(repos);
 
         const { data: starred } = await octokit.request(
           `GET /users/${user}/starred`
         );
         setStarred(starred);
-        console.log(starred)
+        setFilteredStarred(starred);
 
         const { data: profile } = await octokit.request(`GET /users/${user}`);
         setProfile(profile);
-
       } catch (error) {
-        console.error("Erro ao buscar dados:", error);
+        console.error("Err:", error);
       }
     }
     fetchData();
   }, []);
 
+  const handleSearch = (text) => {
+    switch (step) {
+      case 0:
+        console.log("1");
+        if (text === "") {
+          setFilteredRepos(repos);
+        } else {
+          const newFilter = repos.filter((item) =>
+            item.name.toLowerCase().includes(text.toLowerCase())
+          );
+          setFilteredRepos(newFilter);
+        }
+        break;
+      case 1:
+        console.log("2");
+        if (text === "") {
+          setFilteredStarred(starred);
+        } else {
+          const newFilter = starred.filter((item) =>
+            item.name.toLowerCase().includes(text.toLowerCase())
+          );
+          setFilteredStarred(newFilter);
+        }
+        break;
+      default:
+        return;
+    }
+  };
+
   return (
     <div className={styles.containerMain}>
       <Header />
       <main className={styles.contentMain}>
-        {repos && starred && profile && (
+        {filteredRepos && starred && profile && (
           <>
             <div className={styles.profile}>
               <Profile infos={profile} />
             </div>
             <div className={styles.detailGithub}>
-              <div className={styles.buttonOption}>
-                <button
-                  className={`${styles.button} ${
-                    step === 0 ? styles.active : ""
-                  }`}
-                  onClick={handleRepos}
-                >
-                  Repos <span className={styles.count}>{repos.length}</span>
-                </button>
-                <button
-                  className={`${styles.button} ${
-                    step === 1 ? styles.active : ""
-                  }`}
-                  onClick={handleStarred}
-                >
-                  Starred <span className={styles.count}>{starred.length}</span>
-                </button>
-                <div
-                  className={`${styles.line} ${
-                    step === 0 ? styles.lineLeft : styles.lineRight
-                  }`}
-                />
-              </div>
+              <Menu
+                step={step}
+                handleRepos={handleRepos}
+                handleStarred={handleStarred}
+                reposLength={repos.length}
+                starredLength={starred.length}
+              />
               <div className={styles.contentGithub}>
-                <Search />
+                <Search onSearch={handleSearch} />
                 {step === 0 ? (
                   <DetailGithub
-                    list={repos}
+                    list={filteredRepos}
                     icon={<IoMdCode />}
                     type={"repos"}
                   />
                 ) : (
                   <DetailGithub
+                    list={filteredStarred}
                     icon={<FaStar />}
-                    list={starred}
                     type={"starred"}
                   />
                 )}
