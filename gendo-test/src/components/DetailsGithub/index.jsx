@@ -4,15 +4,15 @@ import Fork from "../../assets/git.svg";
 import { useEffect } from "react";
 
 export default function DetailGithub({ icon, list, type }) {
-  useEffect(()=>{
-    console.log(list)
-  }, [])
+  useEffect(() => {
+    console.log(list);
+  }, []);
   return (
     <div className={styles.containerGithub}>
       {list.length > 0 &&
         list.map((item, idx) => (
           <div key={idx} className={styles.descriptionGithub}>
-            {type === "repos"  ? (
+            {type === "repos" ? (
               <h1>
                 <strong>{item.name}</strong>
               </h1>

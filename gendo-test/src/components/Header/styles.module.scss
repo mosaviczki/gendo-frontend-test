@@ -2,12 +2,12 @@
 @use "../../styles/mixin" as mixin;
 @use "../../styles/media" as media;
 
-.containerHeader{
+.containerHeader {
     width: 100%;
     background-color: global.$default-color;
 }
 
-.contentHeader{
+.contentHeader {
     display: flex;
     gap: 10px;
     color: global.$white-color;
@@ -15,11 +15,11 @@
     align-items: center;
     font-size: 12px;
 
-    h1{
+    h1 {
         font-weight: global.$text-style-bold;
     }
 
-    span{
+    span {
         font-weight: global.$text-style-regular;
     }
 
@@ -28,6 +28,6 @@
     }
 }
 
-.imageGithub{
+.imageGithub {
     width: 40px;
 }

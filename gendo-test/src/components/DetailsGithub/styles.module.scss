@@ -1,32 +1,33 @@
 @use "../../styles/globals" as global;
 @use "../../styles/media" as media;
 
-.containerGithub{
+.containerGithub {
     width: 100%;
     height: 100%;
 }
-.descriptionGithub{
+
+.descriptionGithub {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid global.$pale-grey-color;
     padding: 30px 0;
     gap: 5px;
 
-    &:last-child{
+    &:last-child {
         border-bottom: none;
     }
 
-    h1{
+    h1 {
         color: global.$blue-color;
         font-weight: global.$text-style-regular;
     }
 
-    p{
+    p {
         color: global.$slate-grey-color;
     }
 }
 
-.detailCode{
+.detailCode {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -34,19 +35,19 @@
     padding-top: 15px;
 }
 
-.code{
+.code {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
 
-    svg{
+    svg {
         color: global.$slate-grey-color;
         width: 20px;
         height: 20px;
     }
 
-    img{
+    img {
         width: 10px;
     }
 }

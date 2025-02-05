@@ -1,41 +1,35 @@
 @use "../../styles/globals" as global;
-@use "../../styles/mixin" as mixin;
 @use "../../styles/media" as media;
 
-.containerProfile{
+.containerProfile {
     width: 100%;
     padding: 25px 20px;
-
-    @include media.desktop {
-        @include mixin.centered;
-    }
 }
 
-.contentProfile{
+.contentProfile {
     display: flex;
     gap: 10px;
     align-items: center;
 
     @include media.desktop {
-        @include mixin.centered;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 }
 
-.imageProfile{
+.imageProfile {
     width: 80px;
     height: 80px;
     object-fit: cover;
     border-radius: 50%;
 
-    @include media.tablet{
+    @include media.tablet {
         width: 150px;
         height: 150px;
     }
 
-    @include media.desktop{
+    @include media.desktop {
         width: 260px;
         height: 260px;
         max-width: 100%;
@@ -43,23 +37,23 @@
     }
 }
 
-.aboutProfile{
-    color:black;
+.aboutProfile {
+    color: black;
 
-    h1{
+    h1 {
         font-weight: global.$text-style-bold;
         color: global.$default-color;
         font-size: global.$text-style-title;
 
     }
 
-    p{
+    p {
         font-weight: global.$text-style-regular;
         color: global.$slate-grey-color;
         font-size: global.$text-style-paragraph;
     }
 
-    @include media.desktop{
+    @include media.desktop {
         text-align: center;
     }
 }
