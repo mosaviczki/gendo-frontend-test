@@ -58,16 +58,12 @@
     @include media.desktop {
         max-width: 150px;
     }
-
-    /* @include media.tablet {
-        max-width: 150px;
-    } */
 }
 
 .lineLeft {
     left: 0%;
 
-    @include media.tablet {
+    @include media.desktop {
         left: 20px;
     }
 }
@@ -75,7 +71,7 @@
 .lineRight {
     left: 50%;
 
-    @include media.tablet {
+    @include media.desktop {
         left: 190px;
     }
 }

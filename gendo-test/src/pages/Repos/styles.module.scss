@@ -48,7 +48,9 @@
 
 .containerReadme {
     padding: 10px 20px;
-
+    @include media.desktop {
+        @include mixin.centered;
+    }
 }
 
 .readme {
