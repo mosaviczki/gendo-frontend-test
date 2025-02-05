@@ -8,10 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    /* @include desktop {
-        
-    } */
+    
     main {
         width: 100%;
     }
@@ -19,7 +16,7 @@
 
 .contentMain {
     width: 100%;
-    height: 1000px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,7 +45,7 @@
     flex: 1;
     padding: 15px 20px;
     width: 100%;
-    border-bottom: 1px solid global.$pale-grey-color;
+    border-bottom: 2px solid global.$pale-grey-color;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -92,7 +89,7 @@
 
 .line {
     position: absolute;
-    bottom: 0px;
+    bottom: -2px;
     height: 5px;
     width: 50%;
     background-color: global.$rusty-orange-color;

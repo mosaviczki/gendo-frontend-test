@@ -1,12 +1,11 @@
 @use "../../styles/globals" as global;
-@use "../../styles/mixin" as mixin;
 @use "../../styles/media" as media;
 
 .containerGithub{
     width: 100%;
     height: 100%;
 }
-.descriptionRepos{
+.descriptionGithub{
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid global.$pale-grey-color;
