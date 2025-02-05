@@ -21,6 +21,7 @@ export default function Home() {
     const [profile, setProfile] = useState();
     const [filteredRepos, setFilteredRepos] = useState();
     const [filteredStarred, setFilteredStarred] = useState();
+    const [loading, setLoading] = useState(true);
     const user = "mosaviczki";
   
     const handleRepos = () => setStep(0);
@@ -43,6 +44,8 @@ export default function Home() {
   
           const { data: profile } = await octokit.request(`GET /users/${user}`);
           setProfile(profile);
+
+          setLoading(false);
         } catch (error) {
           console.error("Err:", error);
         }
@@ -83,7 +86,8 @@ export default function Home() {
     <div className={styles.containerMain}>
       <Header />
       <main className={styles.contentMain}>
-        {filteredRepos && starred && profile && (
+        {loading && <div className={styles.loading}><img src="https://github.githubassets.com/images/mona-loading-dimmed.gif" alt="loading-github" className={styles.imageLoading}/></div>}
+        {!loading && filteredRepos && starred && profile && (
           <>
             <div className={styles.profile}>
               <Profile infos={profile} />

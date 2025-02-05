@@ -20,7 +20,7 @@ export default function DetailGithub({ icon, list, type }) {
                   <strong>{item.full_name.split("/")[1]}</strong>
                 </h1>
               )}
-              <p>{item.description}</p>
+              <p className={styles.description}>{item.description}</p>
               <div className={styles.detailCode}>
                 <div className={styles.code}>
                   {icon}

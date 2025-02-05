@@ -29,9 +29,13 @@
         font-weight: global.$text-style-regular;
     }
 
-    p {
+    .description{
         color: global.$slate-grey-color;
         padding-top: 10px;
+    }
+
+    p{
+        color: global.$slate-grey-color;
     }
 
     a{
