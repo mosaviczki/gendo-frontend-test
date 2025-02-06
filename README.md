@@ -4,10 +4,10 @@
 * Crie um .env de acordo com o .env.exemple, é necessário um Acess Token Classic do github 
 
 <strong>code</strong>
-* Para o projeto rode no cmd um `npm i`
 
 <strong>Rodando projeto</strong>
-* Para rodar o projeto basta dar um `npm run dev` no cdm
+* Vá para o diretório do projeto `cd gendo-test`
+* Para rodar o projeto basta dar um `npm i & npm run dev` no cdm
 
 <strong>Alterações código</strong>
 * Caso você queira ver um perfil diferente, basta ir em `src/pages/Home/index.jsx` e na linha 25 alterar
