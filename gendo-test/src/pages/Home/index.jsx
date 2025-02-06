@@ -22,7 +22,7 @@ export default function Home() {
     const [filteredRepos, setFilteredRepos] = useState();
     const [filteredStarred, setFilteredStarred] = useState();
     const [loading, setLoading] = useState(true);
-    const user = "mosaviczki";
+    const user = import.meta.env.VITE_USER;
   
     const handleRepos = () => setStep(0);
     const handleStarred = () => setStep(1);
