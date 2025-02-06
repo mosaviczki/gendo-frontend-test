@@ -6,15 +6,15 @@
 <strong>code</strong>
 * Para o projeto rode no cmd um `npm i`
 
+<strong>Rodando projeto</strong>
+* Para rodar o projeto basta dar um `npm run dev` no cdm
+
 <strong>Alterações código</strong>
 * Caso você queira ver um perfil diferente, basta ir em `src/pages/Home/index.jsx` e na linha 25 alterar
 ```diff
 - const user = "mosaviczki";
 + const user = "NEW_USER";
 ```
-
-<strong>Rodando projeto</strong>
-* Para rodar o projeto basta dar um `npm run dev` no cdm
 
 ## Informações adicionais
 * Foi utilizado o vite pela facilidade de iniciar o projeto;
