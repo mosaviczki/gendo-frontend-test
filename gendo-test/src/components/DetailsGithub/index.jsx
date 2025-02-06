@@ -9,7 +9,7 @@ export default function DetailGithub({ icon, list, type }) {
       {list.length > 0 &&
         list.map((item, idx) => (
           <button key={idx} className={styles.descriptionGithub}>
-            <Link to={`/repos/${item.full_name}`} >
+            <Link to={`/repos/${item.full_name}`}>
               {type === "repos" ? (
                 <h1>
                   <strong>{item.name}</strong>
@@ -20,7 +20,10 @@ export default function DetailGithub({ icon, list, type }) {
                   <strong>{item.full_name.split("/")[1]}</strong>
                 </h1>
               )}
-              <p className={styles.description}>{item.description}</p>
+              {item.description && (
+                <p className={styles.description}>{item.description}</p>
+              )}
+
               <div className={styles.detailCode}>
                 <div className={styles.code}>
                   {icon}
