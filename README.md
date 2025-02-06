@@ -1,7 +1,7 @@
 # Instruções
 
 <strong>.env</strong>
-* Crie um .env de acordo com o .env.exemple, é necessário um Acess Token do github 
+* Crie um .env de acordo com o .env.exemple, é necessário um Acess Token Classic do github 
 
 <strong>code</strong>
 * Para o projeto rode no cmd um `npm i`
