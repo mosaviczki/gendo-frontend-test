@@ -1,9 +1,10 @@
 # Instruções
 
-<strong>.env</strong>
-* Crie um .env de acordo com o .env.exemple, é necessário um Acess Token Classic do github 
+<strong>Clone</strong>
+* Clone o repositório em sua máquina local com `git clone https://github.com/mosaviczki/gendo-frontend-test.git`.
 
-<strong>code</strong>
+<strong>.env</strong>
+* Crie um .env de acordo com o .env.exemple, é necessário um Acess Token (Classic) do github 
 
 <strong>Rodando projeto</strong>
 * Vá para o diretório do projeto `cd gendo-test`
