@@ -72,18 +72,20 @@ export default function Repos() {
             <>
               <div className={styles.diretory}>
                 <table className={styles.containerTable}>
-                  {paths.map((item, idx) => (
-                    <tr key={idx}>
-                      <td>
-                        {item.type === "file" ? (
-                          <CiFileOn />
-                        ) : (
-                          <GoFileDirectoryFill />
-                        )}
-                      </td>
-                      <td>{item.name}</td>
-                    </tr>
-                  ))}
+                  <tbody>
+                    {paths.map((item, idx) => (
+                      <tr key={idx}>
+                        <td>
+                          {item.type === "file" ? (
+                            <CiFileOn />
+                          ) : (
+                            <GoFileDirectoryFill />
+                          )}
+                        </td>
+                        <td>{item.name}</td>
+                      </tr>
+                    ))}
+                  </tbody>
                 </table>
               </div>
               <div className={styles.containerReadme}>

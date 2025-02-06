@@ -56,7 +56,6 @@ export default function Home() {
     const handleSearch = (text) => {
       switch (step) {
         case 0:
-          console.log("1");
           if (text === "") {
             setFilteredRepos(repos);
           } else {
@@ -67,7 +66,6 @@ export default function Home() {
           }
           break;
         case 1:
-          console.log("2");
           if (text === "") {
             setFilteredStarred(starred);
           } else {
